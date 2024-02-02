@@ -16,18 +16,50 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.body {
+  background-color: #212024;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .soleil {
+    @apply px-4 py-2 rounded-md 
+      bg-gradient-to-r from-yellow-400/15 to-orange-300/55
+      hover:from-blue-400 hover:to-green-500 transition duration-1000 ease-in-out
+      mx-auto mt-5 bg-white
+      active:bg-lime-500
+      shadow-lg ring-1 ring-slate-900/5 max-w-[100%]
+       w-[94%];
+  }
+}
+
+@layer components {
+  .messi {
+    @apply w-[300px] h-[300px] bg-purple-600 absolute rounded-full top-[50%] left-[50%]
+    translate-x-[-50%] translate-y-[50%] -z-10 blur-[150px];
+  }
+}
+
+@layer components {
+  .acts {
+    @apply flex w-[47%] py-3 items-center justify-center gap-[8px] bg-gray-500 rounded-md;
+  }
+}
+
+.alice-carousel__dots {
+  position: absolute;
+  bottom: -20px;
+  display: flex;
+  right: 36%;
+}
+
+@layer components {
+  .head-btn {
+    @apply bg-slate-200 px-3 py-1 rounded-md text-black;
   }
 }
